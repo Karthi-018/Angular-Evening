@@ -1,0 +1,16 @@
+<h2 *ngIf="choice">This Content will be visiable only if choice is true</h2>
+<h2 *ngIf="!choice">This Content will be visiable only if choice is false</h2>
+
+<div *ngFor="let n of [1,2,3,4,5,6,]">
+    <div>{{n}}</div>
+
+</div>
+
+<ul *ngFor="let n of employees" [ngSwitch]="n.salary">
+    <li *ngSwitchCase="10000" class="emp1">{{n.eid}}=> {{n.eName}}=>{{n.salary}}</li>
+    <li *ngSwitchCase="11000" class="emp3">{{n.eid}}=> {{n.eName}}=>{{n.salary}}</li>
+    <li *ngSwitchCase="12000" class="emp5">{{n.eid}}=> {{n.eName}}=>{{n.salary}}</li>
+    <li *ngSwitchCase="8000" class="emp2">{{n.eid}}=> {{n.eName}}=>{{n.salary}}</li>
+    <li *ngSwitchCase="9000" class="emp4">{{n.eid}}=> {{n.eName}}=>{{n.salary}}</li>
+</ul>
+
