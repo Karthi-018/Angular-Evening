@@ -13,7 +13,8 @@ import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { CustomDirective } from './custom.directive';
 import { PipesComponent } from './pipes/pipes.component';
 import { GrowthPipe } from './growth.pipe';
-import { CategoryPipe } from './category.pipe'
+import { CategoryPipe } from './category.pipe';
+import { EmployeeFormComponent } from './employee-form/employee-form.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CategoryPipe } from './category.pipe'
     CustomDirective,
     PipesComponent,
     GrowthPipe,
-    CategoryPipe
+    CategoryPipe,
+    EmployeeFormComponent
   ],
   imports: [
     BrowserModule,

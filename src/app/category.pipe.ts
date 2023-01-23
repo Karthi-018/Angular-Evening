@@ -3,7 +3,7 @@ import { Employee } from './model/employee';
 
 @Pipe({
   name: 'category',
-  pure:false
+  pure: false
 })
 export class CategoryPipe implements PipeTransform {
 

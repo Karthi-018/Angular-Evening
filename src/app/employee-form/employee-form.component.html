@@ -1,0 +1,65 @@
+<div class="card card-block container text-center bg-primary text-light text-bolder titlefont">
+    Addding New Employee Details
+  </div>
+<div id="list">
+  <form #employeeform="ngForm">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Employee ID</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Employee Id" name="eid" [(ngModel)]="employee.eId" #eid="ngModel" required [class.is-invalid]='eid.invalid && eid.touched' pattern="^[0-9]+$">
+        <div *ngIf='eid.touched'>
+          <div *ngIf='eid.invalid'>
+              <small class='text-danger' *ngIf="eid.errors?.['required']">
+                Employee ID Can't be empty
+              </small>
+              <small class='text-danger' *ngIf="eid.errors?.['pattern']">
+                Employee ID should be only numbers
+              </small>
+            </div>
+      </div>
+        
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Employee Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Employee Name" name="ename" [(ngModel)]="employee.eName" #ename="ngModel" required [class.is-invalid]='ename.invalid && ename.touched' pattern="^[A-Za-z\s]+$">
+        <div *ngIf='ename.touched'>
+          <div *ngIf='ename.invalid'>
+              <small class='text-danger' *ngIf="ename.errors?.['required']">
+                Employee Name Can't be empty
+              </small>
+              <small class='text-danger' *ngIf="ename.errors?.['pattern']">
+                Employee Name should consist of only alphabets
+              </small>
+            </div>
+      </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Employee Job Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter the Employee Department" name="job" [(ngModel)]="employee.dept" #job="ngModel" required [class.is-invalid]='job.invalid && job.touched' pattern="^[A-Za-z\s]+$"></textarea>
+        <div *ngIf='job.touched'>
+          <div *ngIf='job.invalid'>
+              <small class='text-danger' *ngIf="job.errors?.['required']">
+                Employee Job Can't be empty
+              </small>
+            </div>
+      </div>
+      </div>
+      <label for="exampleFormControlTextarea1" class="form-label">Select Employee category</label>
+      <select class="form-select" aria-label="Default select example" 
+      [(ngModel)]='employee.category' name='category' #category="ngModel" required [class.is-invalid]='category.invalid && category.touched '>
+        <!-- <option>--select category--</option> -->
+        <option value="default">-- Select Category--</option>
+            <option *ngFor='let category of categories' value="{{category}}">
+                {{category}}
+            </option>
+      </select>
+      <small class="text-danger" 
+      [class.d-none]="category.untouched">
+        Please choose a Category</small>
+      <!-- <a href="#" class="btn btn-primary">Create</a> <a href="#" class="btn btn-primary">More</a> -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" [disabled]='employeeform.form.invalid'> Create</button>
+      <button type="reset" class="btn btn-danger">Clear</button>
+      </div>
+    </form>  
+</div>
+

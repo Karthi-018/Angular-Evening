@@ -16,12 +16,13 @@ export class EmployeelistComponent implements OnInit {
     this.employees=employees;
   }
 
-  addEmployee()
-  {
-    this.employees.unshift(new Employee("106","FFF","18000","ParTime"));
+ 
+  ngOnInit(): void {
   }
 
-  ngOnInit(): void {
+  createEmployee()
+  {
+    this.employees.push(new Employee("06","ABC","HR","Temp"));
   }
 
 }
