@@ -1,4 +1,16 @@
 <h1>List of Employee Details</h1>
-<div *ngFor="let e of employees">
+<p> Select a Category : </p>
+<select [(ngModel)]="cat" name="category">
+    <option value="all">All</option>
+    <option *ngFor="let category of categories" value="{{category}}"  >{{category}}</option>
+</select>
+
+<button style="margin: 15px;" (click)="addEmployee()">Add Employee</button>
+
+
+<div *ngFor="let e of employees | category:cat">
+    <div style="margin: 10px;">
+
     <app-employee [employee]="e"></app-employee>
+</div>
 </div>

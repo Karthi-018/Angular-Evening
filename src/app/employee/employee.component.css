@@ -1,3 +1,24 @@
 h3{
     color: tomato;
 }
+
+.ft
+{
+    border: 8px double black;
+}
+
+.pt
+{
+    border: 8px double blue;
+}
+
+.pe
+{
+    border: 8px double orange;
+    
+}
+
+.te
+{
+    border: 8px double tomato;
+}

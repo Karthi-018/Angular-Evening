@@ -10,7 +10,10 @@ import {FormsModule} from '@angular/forms';
 import { DirectiveComponent } from './directive/directive.component';
 import { HomeComponent } from './home/home.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
-import { CustomDirective } from './custom.directive'
+import { CustomDirective } from './custom.directive';
+import { PipesComponent } from './pipes/pipes.component';
+import { GrowthPipe } from './growth.pipe';
+import { CategoryPipe } from './category.pipe'
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CustomDirective } from './custom.directive'
     DirectiveComponent,
     HomeComponent,
     EmployeelistComponent,
-    CustomDirective
+    CustomDirective,
+    PipesComponent,
+    GrowthPipe,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

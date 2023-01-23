@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../model/employee';
-import { employees } from '../model/employeelist';
+import { categories, employees } from '../model/employeelist';
 
 @Component({
   selector: 'app-employeelist',
@@ -9,9 +9,16 @@ import { employees } from '../model/employeelist';
 })
 export class EmployeelistComponent implements OnInit {
 
+  categories = categories;
+  cat:string = 'all';
   employees:Employee[];
   constructor() { 
     this.employees=employees;
+  }
+
+  addEmployee()
+  {
+    this.employees.unshift(new Employee("106","FFF","18000","ParTime"));
   }
 
   ngOnInit(): void {

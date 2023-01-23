@@ -1,12 +1,23 @@
 <!-- <h1>Employee Details</h1> -->
 <div appCustom [category]="employee.category">
 <h3> Employee ID : {{employee.eId}}</h3>
-<h3> Employee Name : {{employee.eName}}</h3>
-<h3> Employee Departmenrt : {{employee.dept}}</h3>
-<h3> Employee Category : {{employee.category}}</h3>
+<h3> Employee Name : {{employee.eName | lowercase }}</h3>
+<h3> Employee Departmenrt : {{employee.dept }}</h3>
+<h3> Employee Category : {{employee.category }}</h3>
 
 **********************************************
 </div>
 <!-- <ng-content></ng-content> -->
+
+
+<!-- Asyncpipes
+currencypipe
+datepipe
+deciamlpipe
+jsonpipe
+lowercase
+uppercase
+slicepipe
+Titlecase -->
 
 
